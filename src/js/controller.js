@@ -85,7 +85,6 @@ const controlAddRecipe = async function(newRecipe) {
 
     // Upload the new recipe data
     await model.uploadRecipe(newRecipe);
-    console.log(model.state.recipe);
 
     // Render recipe
     recipeView.render(model.state.recipe);
@@ -119,7 +118,6 @@ const init = function() {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRecipeView._addHandlerUpload(controlAddRecipe);
-  console.log("Application initialized Successfully!");
 };
 
 init();
